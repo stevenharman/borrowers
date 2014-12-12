@@ -11,7 +11,22 @@ var app = new EmberApp();
 // environments, specify an object as the first parameter. That
 // object's keys should be the environment name and the values
 // should be the asset to use in that environment.
-//
+
+app.import('bower_components/picnic/releases/v2.min.css');
+app.import('vendor/fontello/fontello.css');
+app.import('vendor/fontello/font/fontello.ttf', {
+  destDir: 'font'
+});
+app.import('vendor/fontello/font/fontello.eot', {
+  destDir: 'font'
+});
+app.import('vendor/fontello/font/fontello.svg', {
+  destDir: 'font'
+});
+app.import('vendor/fontello/font/fontello.woff', {
+  destDir: 'font'
+});
+
 // If the library that you are including contains AMD or ES6
 // modules that you would like to import into your application
 // please specify an object with the list of modules as keys
