@@ -1,13 +1,11 @@
 import Ember from 'ember';
 
 export default Ember.ObjectController.extend({
-  isValid: Ember.computed(
-    'model.description',
-    'model.notes',
-    function() {
-      return !Ember.isEmpty(this.get('model.description')) &&
-        !Ember.isEmpty(this.get('model.notes'))
-    }
+  hasDescription: Ember.computed.notEmpty('model.description'),
+  hasNotes: Ember.computed.notEmpty('model.notes'),
+  isValid: Ember.computed.and(
+    'hasDescription',
+    'hasNotes'
   ),
   actions: {
     save: function() {
