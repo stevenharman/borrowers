@@ -9,7 +9,6 @@ export default Ember.ObjectController.extend({
   ),
   actions: {
     save: function() {
-      debugger;
       if (!this.get('isValid')) {
         this.set('errorMessage', "You have to fill out all the fields");
         return false;
