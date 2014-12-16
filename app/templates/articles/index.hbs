@@ -4,18 +4,24 @@
   <thead>
     <tr>
       <th>Description</th>
+      <th>Notes</th>
       <th>Borrowed Since</th>
       <th></th>
       <th></th>
     </tr>
   </thead>
   <tbody>
-    {{#each article in model}}
+    {{#each item in controller itemController='articles/item'}}
       <tr>
-        <td>{{article.description}}</td>
-        <td>{{article.createdAt}}</td>
-        <td></td>
-        <td></td>
+        <td>{{item.description}}</td>
+        <td>{{item.notes}}</td>
+        <td>{{item.createdAt}}</td>
+        <td>{{view 'select' content=controller.states selection=item.state}}</td>
+        <td>
+          {{#if item.isSaving}}
+            <p>Saving...</p>
+          {{/if}}
+        </td>
       </tr>
     {{/each}}
   </tbody>
