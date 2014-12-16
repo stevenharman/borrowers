@@ -15,7 +15,7 @@
       <tr>
         <td>{{item.description}}</td>
         <td>{{item.notes}}</td>
-        <td>{{item.createdAt}}</td>
+        <td>{{formatted-date item.createdAt 'LL'}}</td>
         <td>{{view 'select' content=controller.states selection=item.state}}</td>
         <td>
           {{#if item.isSaving}}
