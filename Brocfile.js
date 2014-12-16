@@ -13,6 +13,7 @@ var app = new EmberApp();
 // should be the asset to use in that environment.
 
 app.import('bower_components/picnic/releases/v2.min.css');
+app.import('bower_components/moment/moment.js');
 app.import('vendor/fontello/fontello.css');
 app.import('vendor/fontello/font/fontello.ttf', {
   destDir: 'font'
