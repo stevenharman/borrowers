@@ -11,7 +11,7 @@
     </tr>
   </thead>
   <tbody>
-    {{#each item in controller itemController='articles/item'}}
+    {{#each item in controller.filteredResults itemController='articles/item'}}
       <tr>
         <td>{{item.description}}</td>
         <td>{{item.notes}}</td>
