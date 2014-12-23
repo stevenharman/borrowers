@@ -1,5 +1,4 @@
 import DS from 'ember-data';
-import Ember from 'ember';
 
 export default DS.Model.extend({
   articles: DS.hasMany('article', {async: true}),
@@ -8,7 +7,7 @@ export default DS.Model.extend({
   lastName: DS.attr('string'),
   totalArticles: DS.attr('number'),
   twitter: DS.attr('string'),
-  fullName: Ember.computed('firstName', 'lastName', function() {
+  fullName: function() {
     return this.get('firstName') + ' ' + this.get('lastName');
-  })
+  }.property('firstName', 'lastName')
 });
