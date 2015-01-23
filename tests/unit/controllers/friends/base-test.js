@@ -3,7 +3,7 @@ import {
   test
 } from 'ember-qunit';
 
-moduleFor('controller:friends/base', 'FriendsBaseController', {
+moduleFor('base-controller:friends', 'FriendsBaseController', {
   // Specify the other units that are required for this test.
   // needs: ['controller:foo']
 });
