@@ -1,14 +1,14 @@
 import Ember from 'ember';
 import startApp from '../../helpers/start-app';
 
-var App;
+var application;
 
 module('Acceptance: FriendsNew', {
   setup: function() {
-    App = startApp();
+    application = startApp();
   },
   teardown: function() {
-    Ember.run(App, 'destroy');
+    Ember.run(application, 'destroy');
   }
 });
 
@@ -39,7 +39,7 @@ test("Creating a new friend", function() {
 });
 
 
-test("visiting /friends/new", function() {
+test("Not filling out all the fields does not save the friend", function() {
   visit('/friends/new');
   click('input[value="Save"]');
   andThen(function() {
