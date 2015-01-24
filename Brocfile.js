@@ -16,16 +16,16 @@ app.import('bower_components/picnic/releases/v2.min.css');
 app.import('bower_components/moment/moment.js');
 app.import('vendor/fontello/fontello.css');
 app.import('vendor/fontello/font/fontello.ttf', {
-  destDir: 'font'
+  destDir: 'assets/fonts'
 });
 app.import('vendor/fontello/font/fontello.eot', {
-  destDir: 'font'
+  destDir: 'assets/fonts'
 });
 app.import('vendor/fontello/font/fontello.svg', {
-  destDir: 'font'
+  destDir: 'assets/fonts'
 });
 app.import('vendor/fontello/font/fontello.woff', {
-  destDir: 'font'
+  destDir: 'assets/fonts'
 });
 
 // If the library that you are including contains AMD or ES6
