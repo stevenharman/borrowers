@@ -9,5 +9,7 @@ export default DS.Model.extend({
   totalArticles: DS.attr('number'),
   fullName: Ember.computed('firstName', 'lastName', function() {
     return this.get('firstName') + " " + this.get('lastName');
-  })
+  }),
+
+  articles: DS.hasMany('article')
 });
